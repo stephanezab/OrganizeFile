@@ -1,6 +1,5 @@
 import os
 import collections
-from pprint import pprint
 
 EXT_AUDIO = ["mp3", 'wav', "raw", "wma", "mid", "midi"]
 EXT_VIDEO = ["mp4", "mpg", "mpeg", "avi", "mov", "flv", "mkv", "mwv","m4v", "h264"]
@@ -9,7 +8,7 @@ EXT_DOCS = ["txt", "pdf", "csv", "xls", "xlsx", "ods", "doc", "docx", "html", "o
 EXT_COMPR = ["zip", "z", "7z", "rar", "tar", "gz", "rpm", "pkg", "deb"]
 EXT_INSTL = ["dmg", "exe", "iso"]
 
-#print(os.listdir("/Users/steph"))
+
 
 BASE_PATH = os.path.expanduser("~")
 DEST_DIRS = ["Music", "Video", "Pictures", "Documents", "Applications", "Other"]
@@ -31,7 +30,6 @@ for file_name in files_list:
         file_ext = file_name.split(".")[-1]
         files_mapping[file_ext].append(file_name)
 
-#pprint(files_mapping)
 
 
 for f_ext, f_list in files_mapping.items():
